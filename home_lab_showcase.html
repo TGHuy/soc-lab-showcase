@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Tran - Home SOC Lab</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        /* Simple CSS-only animated chart */
+        .chart-bar {
+            animation: rise 1.5s ease-out;
+        }
+        @keyframes rise {
+            0% { transform: scaleY(0); }
+            100% { transform: scaleY(1); }
+        }
+        
+        /* Log animation */
+        .log-entry {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Blinking light for "live" effect */
+        .live-dot {
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 p-4 md:p-10">
+    <div class="max-w-6xl mx-auto">
+
+        <!-- Header Section -->
+        <div class="text-center border-b border-gray-700 pb-6 mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Chris Tran's Home SOC & Threat Analysis Lab</h1>
+            <p class="text-lg md:text-xl text-blue-400">Project Status: <span class="font-semibold">Operational & Expanding</span></p>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- Left Column: Components & Goals -->
+            <div class="lg:col-span-1 space-y-8">
+
+                <!-- Core Components Section -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl">
+                    <h2 class="text-2xl font-semibold text-white mb-5 border-b border-gray-600 pb-3">
+                        <i class="fa-solid fa-cubes-stacked mr-2"></i> Core Components
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center bg-gray-700 p-3 rounded-md">
+                            <i class="fa-solid fa-server text-blue-400 text-2xl w-8"></i>
+                            <span class="ml-4 text-lg">VMware ESXi</span>
+                        </div>
+                        <div class="flex items-center bg-gray-700 p-3 rounded-md">
+                            <i class="fa-solid fa-shield-halved text-red-400 text-2xl w-8"></i>
+                            <span class="ml-4 text-lg">pfSense Firewall</span>
+                        </div>
+                        <div class="flex items-center bg-gray-700 p-3 rounded-md">
+                            <i class="fa-solid fa-network-wired text-green-400 text-2xl w-8"></i>
+                            <span class="ml-4 text-lg">Kali Linix (Attacker)</span>
+                        </div>
+                        <div class="flex items-center bg-gray-700 p-3 rounded-md">
+                            <i class="fa-brands fa-windows text-blue-400 text-2xl w-8"></i>
+                            <span class="ml-4 text-lg">Windows 10 Flare VM Endpoints</span>
+                        </div>
+                        <div class="flex items-center bg-gray-700 p-3 rounded-md">
+                            <i class="fa-brands fa-linux text-yellow-400 text-2xl w-8"></i>
+                            <span class="ml-4 text-lg">Linux Servers Metasploit2 (Victims)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Steps Section -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl">
+                    <h2 class="text-2xl font-semibold text-white mb-5 border-b border-gray-600 pb-3">
+                        <i class="fa-solid fa-arrow-trend-up mr-2"></i> Next Steps
+                    </h2>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-spinner text-yellow-400 mt-1.5 mr-3 animate-spin"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg text-yellow-400">IN PROGRESS</h3>
+                                <p class="text-gray-300">Deploy Splunk Universal Forwarders & Sysmon for full endpoint visibility.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-list-check text-gray-400 mt-1.5 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg">PLANNED</h3>
+                                <p class="text-gray-300">Run live attack simulations (e.g., Atomic Red Team) and hunt for TTPs.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-list-check text-gray-400 mt-1.5 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg">PLANNED</h3>
+                                <p class="text-gray-300">Build and tune custom detection rules based on attack findings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Mock Dashboard -->
+            <div class="lg:col-span-2 bg-gray-800 p-6 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-semibold text-white mb-5 border-b border-gray-600 pb-3">
+                    <i class="fa-solid fa-chart-line mr-2"></i> Splunk Monitoring Dashboard (Mockup)
+                </h2>
+                
+                <!-- Live Status -->
+                <div class="flex items-center mb-4">
+                    <div class="live-dot w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                    <span class="text-green-400 font-semibold">LIVE LOG INGESTION: pfSense Firewall</span>
+                </div>
+
+                <!-- Mock Chart -->
+                <div class="bg-gray-900 p-4 rounded-lg mb-6">
+                    <h3 class="text-lg font-semibold text-white mb-3">Firewall Events (Last 60 Minutes)</h3>
+                    <div class="h-40 flex items-end space-x-2">
+                        <!-- CSS-only bars for a chart effect -->
+                        <div class="chart-bar w-1/12 bg-blue-500 rounded-t-sm" style="height: 20%; transform-origin: bottom;"></div>
+                        <div class="chart-bar w-1/12 bg-blue-500 rounded-t-sm" style="height: 30%; transform-origin: bottom; animation-delay: 50ms;"></div>
+                        <div class="chart-bar w-1/12 bg-red-500 rounded-t-sm" style="height: 45%; transform-origin: bottom; animation-delay: 100ms;"></div>
+                        <div class="chart-bar w-1/12 bg-blue-500 rounded-t-sm" style="height: 35%; transform-origin: bottom; animation-delay: 150ms;"></div>
+                        <div class="chart-bar w-1/12 bg-blue-500 rounded-t-sm" style="height: 55%; transform-origin: bottom; animation-delay: 200ms;"></div>
+                        <div class="chart-bar w-1/12 bg-blue-500 rounded-t-sm" style="height: 60%; transform-origin: bottom; animation-delay: 250ms;"></div>
+                        <div class="chart-bar w-1/12 bg-blue-500 rounded-t-sm" style="height: 50%; transform-origin: bottom; animation-delay: 300ms;"></div>
+                        <div class="chart-bar w-1/12 bg-red-500 rounded-t-sm" style="height: 75%; transform-origin: bottom; animation-delay: 350ms;"></div>
+                        <div class="chart-bar w-1/12 bg-blue-500 rounded-t-sm" style="height: 65%; transform-origin: bottom; animation-delay: 400ms;"></div>
+                        <div class="chart-bar w-1/12 bg-blue-500 rounded-t-sm" style="height: 80%; transform-origin: bottom; animation-delay: 450ms;"></div>
+                        <div class="chart-bar w-1/12 bg-blue-500 rounded-t-sm" style="height: 70%; transform-origin: bottom; animation-delay: 500ms;"></div>
+                        <div class="chart-bar w-1/12 bg-blue-500 rounded-t-sm" style="height: 85%; transform-origin: bottom; animation-delay: 550ms;"></div>
+                    </div>
+                </div>
+
+                <!-- Mock Log Feed -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Live Log Feed (pfSense)</h3>
+                    <div class="bg-gray-900 h-64 p-4 rounded-lg font-mono text-sm text-gray-400 overflow-y-auto">
+                        <p class="log-entry" style="animation-delay: 0.1s;"><span class="text-green-400">[11/11/2025 11:10:01]</span> <span class="text-yellow-400">[BLOCK]</span> 192.168.1.10 -> 8.8.8.8:53 (DNS)</p>
+                        <p class="log-entry" style="animation-delay: 0.3s;"><span class="text-green-400">[11/11/2025 11:10:03]</span> <span class="text-cyan-400">[PASS]</span> 192.168.1.12 -> 104.22.1.18:443 (HTTPS)</p>
+                        <p class="log-entry" style="animation-delay: 0.5s;"><span class="text-green-400">[11/11/2025 11:10:04]</span> <span class="text-red-400">[ALERT]</span> <span class="text-yellow-400">[BLOCK]</span> 45.12.100.5:1234 -> 192.168.1.10:80 (HTTP)</p>
+                        <p class="log-entry" style="animation-delay: 0.9s;"><span class="text-green-400">[11/11/2025 11:10:05]</span> <span class="text-cyan-400">[PASS]</span> 192.168.1.10 -> 1.1.1.1:53 (DNS)</p>
+                        <p class="log-entry" style="animation-delay: 1.1s;"><span class="text-green-400">[11/11/2025 11:10:07]</span> <span class="text-cyan-400">[PASS]</span> 192.168.1.15 -> 172.217.15.14:443 (HTTPS)</p>
+                        <p class="log-entry" style="animation-delay: 1.4s;"><span class="text-green-400">[11/11/2025 11:10:08]</span> <span class="text-yellow-400">[BLOCK]</span> 192.168.1.12 -> 198.51.100.2:22 (SSH)</p>
+                        <p class="log-entry" style="animation-delay: 1.7s;"><span class="text-green-400">[11/11/2025 11:10:10]</span> <span class="text-red-400">[ALERT]</span> <span class="text-yellow-400">[BLOCK]</span> 103.14.22.18:8080 -> 192.168.1.15:80 (HTTP)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center text-gray-500 border-t border-gray-700 pt-6 mt-8">
+            <p>Connect with me on <a href="https://linkedin.com/in/trangiahuy0505" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a></p>
+        </div>
+
+    </div>
+</body>
+</html>
