@@ -69,20 +69,24 @@
                             <span class="ml-4 text-lg">VMware ESXi</span>
                         </div>
                         <div class="flex items-center bg-gray-700 p-3 rounded-md">
-                            <i class="fa-solid fa-shield-halved text-red-400 text-2xl w-8"></i>
+                            <i class="fa-solid fa-shield-halved text-red-500 text-2xl w-8"></i>
                             <span class="ml-4 text-lg">pfSense Firewall</span>
                         </div>
                         <div class="flex items-center bg-gray-700 p-3 rounded-md">
-                            <i class="fa-solid fa-network-wired text-green-400 text-2xl w-8"></i>
-                            <span class="ml-4 text-lg">Active Directory</span>
+                            <i class="fa-brands fa-linux text-red-400 text-2xl w-8"></i>
+                            <span class="ml-4 text-lg">Kali Linux (Attacker)</span>
                         </div>
                         <div class="flex items-center bg-gray-700 p-3 rounded-md">
-                            <i class="fa-brands fa-windows text-blue-400 text-2xl w-8"></i>
-                            <span class="ml-4 text-lg">Windows 10/11 Endpoints</span>
+                            <i class="fa-brands fa-windows text-blue-300 text-2xl w-8"></i>
+                            <span class="ml-4 text-lg">Windows 10 (Flare VM)</span>
                         </div>
                         <div class="flex items-center bg-gray-700 p-3 rounded-md">
-                            <i class="fa-brands fa-linux text-yellow-400 text-2xl w-8"></i>
-                            <span class="ml-4 text-lg">Linux Servers</span>
+                            <i class="fa-solid fa-bug text-orange-400 text-2xl w-8"></i>
+                            <span class="ml-4 text-lg">Metasploitable 2 (Victim)</span>
+                        </div>
+                        <div class="flex items-center bg-gray-700 p-3 rounded-md">
+                            <i class="fa-solid fa-database text-green-400 text-2xl w-8"></i>
+                            <span class="ml-4 text-lg">Splunk Server (Ubuntu)</span>
                         </div>
                     </div>
                 </div>
@@ -105,7 +109,7 @@
                             <i class="fa-solid fa-spinner text-yellow-400 mt-1.5 mr-3 animate-spin"></i>
                             <div>
                                 <h3 class="font-semibold text-lg text-yellow-400">PHASE 2: IN PROGRESS</h3>
-                                <p class="text-gray-300">Deploy Splunk Universal Forwarders & Sysmon to ingest Windows endpoint logs.</p>
+                                <p class="text-gray-300">Deploy Splunk Universal Forwarders & Sysmon to ingest Windows/Linux endpoint logs.</p>
                             </div>
                         </div>
                         
@@ -113,7 +117,7 @@
                             <i class="fa-solid fa-list-check text-gray-400 mt-1.5 mr-3"></i>
                             <div>
                                 <h3 class="font-semibold text-lg">PHASE 3: PLANNED</h3>
-                                <p class="text-gray-300">Run live attack simulations (Atomic Red Team) and hunt for TTPs.</p>
+                                <p class="text-gray-300">Run live attack simulations (Kali) and hunt for TTPs on victims.</p>
                             </div>
                         </div>
                     </div>
